@@ -1,11 +1,20 @@
 /* layout
 ------------------------------------------------------------*/
+html {
+    font-size: 62.5%;
+    @include sp {
+        html {
+            font-size: 31.25%;
+        }
+    }
+}
+
 body {
     background-color: $white-cl;
     font-family: $main-fonts;
     color: $main-text-cl;
     font-weight: 400;
-    font-size: 2.1rem;
+    font-size: 1.4rem;
     position: relative;
     overflow-x: hidden;
     // min-width: $base-width;
@@ -74,11 +83,6 @@ img {
         line-height: 1.2;
     }
 }
-@include mq(md, max) {
-    html {
-        font-size: 31.25%;
-    }
-}
 
 main {
     // padding: 0px 0 100px;
@@ -90,7 +94,7 @@ section {
 
 //-------------------------------------------------------
 .l-container {
-    width: $base-width;
+    max-width: $base-width;
     margin: 0 auto;
     position: relative;
 }

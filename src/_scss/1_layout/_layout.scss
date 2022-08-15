@@ -2,6 +2,8 @@
 ------------------------------------------------------------*/
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
+    
     @include sp {
         html {
             font-size: 31.25%;
@@ -15,6 +17,7 @@ body {
     color: $main-text-cl;
     font-weight: 400;
     font-size: 1.6rem;
+    line-height: 1.5;
     position: relative;
     overflow-x: hidden;
     // min-width: $base-width;
@@ -23,6 +26,14 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
+
+    &.overflow-hidden {
+        overflow-y: hidden;
+    }
+
+    @include maxW(1024px) {
+        font-size: 1.4rem;
+    }
 }
 //-------------------------------------------------------
 h1,
@@ -97,5 +108,39 @@ section {
     max-width: $base-width;
     margin: 0 auto;
     position: relative;
+}
+
+.l-main {
+    padding-top: 81px;
+
+    &::after {
+        position: fixed;
+        content: "";
+        width: 100%;
+        height: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $white-cl;
+        z-index: -99;
+        opacity: 0;
+    }
+
+    &.scroll::after {
+        height: 100vh;
+        z-index: 9;
+        opacity: 1;
+    }
+
+    &.scroll.scroll--hide::after {
+        opacity: 0;
+    }
+
+    @include maxW(1024px) {
+        // padding-top: 125px;
+    }
+
+    @include maxW(767px) {
+        padding-top: 0;
+    }
 }
 //-------------------------------------------------------

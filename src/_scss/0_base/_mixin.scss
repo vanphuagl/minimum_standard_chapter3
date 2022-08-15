@@ -79,3 +79,14 @@ $mq-breakpoints: (
         @content;
     }
 }
+
+@mixin maxW($args) {
+    @media only screen and (max-width: $args) {
+        @content;
+    }
+}
+@mixin minW($args) {
+    @media only screen and (min-width: $args) {
+        @content;
+    }
+}

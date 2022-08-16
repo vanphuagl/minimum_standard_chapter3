@@ -1,0 +1,49 @@
+/* --------------------------------- COMPANY -------------------------------- */
+.p-company {
+    padding-top: 99px;
+
+    @include maxW(1024px) {
+        padding-top: 59px;
+    }
+    @include maxW(767px) {
+        padding-top: 36px;
+    }
+
+    &__wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 120px;
+
+        > h2 {
+            text-align: center;
+            font-size: 4.4rem;
+            font-weight: 500;
+            line-height: 50px;
+            letter-spacing: 3.5px;
+            color: #0080cc;
+            padding-left: 3px;
+        }
+
+        @include maxW(1024px) {
+            padding: 0 20px;
+        }
+        @include maxW(767px) {
+            padding: 0 10px;
+
+            > h2 {
+                font-size: 2.4rem;
+                line-height: 30px;
+                letter-spacing: 1.2px;
+            }
+        }
+    }
+
+    .c-table {
+        margin-top: 57px;
+
+        @include maxW(1024px) {
+            margin-top: 34px;
+        }
+    }
+}

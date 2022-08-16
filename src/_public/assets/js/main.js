@@ -31,24 +31,24 @@ $(document).ready(function () {
   });
 
   //CLICK SCROLL DOWN
-  $(".p-hero__scroll").click(function () {
-    $(".l-main").addClass("scroll");
-    setTimeout(function () {
-      $(".l-main").addClass("scroll--hide");
-    }, 600);
-    setTimeout(function () {
-      $(".l-main").removeClass("scroll scroll--hide");
-    }, 900);
+  // $(".p-hero__scroll").click(function () {
+  //   $(".l-main").addClass("scroll");
+  //   setTimeout(function () {
+  //     $(".l-main").addClass("scroll--hide");
+  //   }, 600);
+  //   setTimeout(function () {
+  //     $(".l-main").removeClass("scroll scroll--hide");
+  //   }, 900);
 
-    let height = $(".p-about").offset().top - 80;
-    $("html,.p-about").animate(
-      {
-        scrollTop: height,
-      },
-      800,
-      "swing"
-    );
-  });
+  //   let height = $(".p-about").offset().top - 80;
+  //   $("html,.p-about").animate(
+  //     {
+  //       scrollTop: height,
+  //     },
+  //     800,
+  //     "swing"
+  //   );
+  // });
 
   /* ---------------------------------- WORKS --------------------------------- */
   // click photo
@@ -68,6 +68,41 @@ $(document).ready(function () {
     $("body").removeClass("overflow-hidden");
   });
 
+  /* --------------------------------- RECRUIT -------------------------------- */
+  $(".p-recruit__link").click(function () {
+    $(".p-recruit__link,.p-recruit__panel").removeClass("is-active");
+    $(this).addClass("is-active");
+    let tabId = $(this).attr("data-id");
+    $("#" + tabId).addClass("is-active");
+  });
+
+  /* --------------------------------- COMPANY -------------------------------- */
+  // // modal message
+  // $(".c-btn__modalclose,.c-modal__close").click(function () {
+  //   $(".c-modal").fadeOut(500);
+  //   $("body").removeClass("is-hidden");
+  // });
+
+  // var KEYCODE_ESC = 27;
+  // $(document).keyup(function(e) {
+  //   if($("body").hasClass("is-hidden")) {
+  //     if (e.keyCode == KEYCODE_ESC) {
+  //       $(".c-modal").fadeOut(500);
+  //       $("body").removeClass("is-hidden");
+  //     }
+  //   }
+
+  // });
+
+  // $(".c-message__item").on("click", function () {
+  //   var messID = $(this).attr("id");
+  //   $(".c-modal").attr("data-id", function () {
+  //     if ($(this).attr("data-id") == messID) {
+  //       $(this).fadeIn(500);
+  //     }
+  //   });
+  //   $("body").addClass("is-hidden");
+  // });
   /* --------------------------- SCROLL ACTIVE LINK --------------------------- */
   $(window).scroll(function () {
     let scrollY = $(window).scrollTop();

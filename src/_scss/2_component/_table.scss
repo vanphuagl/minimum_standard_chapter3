@@ -1,0 +1,64 @@
+/* ---------------------------------- TABLE --------------------------------- */
+.c-table {
+    border: 1px solid #cbcbcb;
+    border-collapse: collapse;
+    line-height: 30px;
+    color: #0b0b0b;
+
+    td {
+        border: 1px solid #cbcbcb;
+        padding: 12px 25px 12px 18px;
+        letter-spacing: 0.4px;
+
+        @include maxW(1024px) {
+            line-height: 25px;
+            padding: 14px 25px 14px 18px;
+        }
+        @include maxW(767px) {
+            display: block;
+            padding: 7px 8px 6px;
+        }
+    }
+
+    ol {
+        list-style: decimal;
+        margin-left: 22px;
+
+        li {
+            text-indent: 10px;
+        }
+    }
+
+    &__th {
+        background: #f7f7f7;
+        min-width: 287px;
+
+        @include maxW(1024px) {
+            min-width: 221px;
+        }
+        @include maxW(767px) {
+            min-width: unset;
+        }
+    }
+
+    &__td {
+        padding-left: 20px;
+
+        @include maxW(1024px) {
+            padding-left: 30px;
+        }
+        @include maxW(767px) {
+            padding-left: 8px;
+        }
+    }
+
+    &__tr.is-onlytab {
+        @include maxW(1024px) {
+            display: table-row;
+        }
+    }
+}
+
+.c-table * {
+    vertical-align: top;
+}

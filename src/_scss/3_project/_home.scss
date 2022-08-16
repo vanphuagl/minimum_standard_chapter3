@@ -11,6 +11,10 @@
     letter-spacing: 2.5px;
     color: #0080cc;
 
+    &--white {
+        color: #fff;
+    }
+
     @include maxW(1024px) {
         font-size: 3rem;
         line-height: 44px;
@@ -80,7 +84,7 @@
     }
 
     &.active {
-        bottom: 50px;
+        bottom: 70px;
     }
 
     &__btn {
@@ -107,5 +111,32 @@
     @include maxW(1024px) {
         width: 35px;
         height: 35px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .is-pcnone {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .is-spnone {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .is-tabnone {
+        display: none !important;
+    }
+}
+
+.is-onlytab {
+    display: none;
+}
+@media screen and (max-width: 1024px) {
+    .is-onlytab {
+        display: block;
     }
 }

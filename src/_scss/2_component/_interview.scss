@@ -479,7 +479,7 @@
             transition: 0.3s ease;
         }
 
-        @include maxW(1024) {
+        @include maxW(1024px) {
             padding-bottom: 161%;
         }
         @include maxW(767px) {
@@ -692,15 +692,15 @@
             border-radius: 5px;
         }
 
-        &::-webkit-scrollbar-track-piece:end {
-            margin-bottom: 5px;
-            background: transparent;
-        }
+        // &::-webkit-scrollbar-track-piece:end {
+        //     margin-bottom: 5px;
+        //     background: transparent;
+        // }
         
-        &::-webkit-scrollbar-track-piece:start {
-            margin-top: 5px;
-            background: transparent;
-        }
+        // &::-webkit-scrollbar-track-piece:start {
+        //     margin-top: 5px;
+        //     background: transparent;
+        // }
 
         @include mid(false);
 

@@ -5,6 +5,7 @@
     .l-container {
         overflow: hidden;
         position: relative;
+        max-width: 100%;
     }
 
     @include maxW(1024px) {
@@ -657,5 +658,232 @@
                 left: -3px;
             }
         }
+    }
+}
+
+/* ------------------------------ MODAL MESSAGE ----------------------------- */
+.c-message {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    display: none;
+
+    &__inner {
+        border: 4px solid $blue-cl;
+        padding: 42px 56px 35px;
+        background-color: $white-cl;
+        width: 80%;
+        max-width: 960px;
+        margin: 0 auto;
+        max-height: calc(100vh - 170px);
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #0080cc;
+            border-radius: 5px;
+        }
+
+        &::-webkit-scrollbar-track-piece:end {
+            margin-bottom: 5px;
+            background: transparent;
+        }
+        
+        &::-webkit-scrollbar-track-piece:start {
+            margin-top: 5px;
+            background: transparent;
+        }
+
+        @include mid(false);
+
+        @include maxW(767px) {
+            width: calc(100% - 40px);
+            padding: 40px 16px;
+            margin: 0 auto;
+            height: calc(100vh - 134px);
+            border: 2px solid #0080cc;
+        }
+    }
+
+    &__title {
+        color: $blue-cl;
+        font-size: 2.4rem;
+        font-weight: bold;
+        line-height: 1.75;
+        letter-spacing: 1.9px;
+        margin-bottom: 21px;
+
+        @include maxW(767px) {
+            font-size: 2rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__modal {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__left {
+        width: 290px;
+        position: relative;
+        padding-top: 3px;
+
+        @include maxW(1024px) {
+            width: 200px;
+        }
+        @include maxW(767px) {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__right {
+        width: calc(100% - 290px - 40px);
+        position: relative;
+
+        @include maxW(1024px) {
+            width: calc(100% - 200px - 30px);
+        }
+        @include maxW(767px) {
+            width: 100%;
+        }
+    }
+
+    &__figure {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding-bottom: 139.5%;
+
+        > img {
+            @include mid(false);
+            min-height: 100%;
+            object-fit: cover;
+            transition: 0.3s ease;
+        }
+
+        @include maxW(1024px) {
+            padding-bottom: 277px;
+        }
+        @include maxW(767px) {
+            width: 100%;
+            padding-bottom: 107%;
+        }
+    }
+
+    &__box {
+        position: relative;
+        bottom: unset;
+        width: 100%;
+        left: 0;
+        top: 0;
+        text-align: center;
+        padding: 9px 0 13px;
+        background: $blue-cl;
+        color: $white-cl;
+        transition: background 0.5s ease;
+        z-index: 1;
+
+        @include maxW(767px) {
+            padding: 19px 0;
+        }
+    }
+
+    &__name {
+        font-size: 2.4rem;
+        letter-spacing: 0.5px;
+        line-height: 1.5;
+
+        @include maxW(1024px) {
+            font-size: 1.4rem;
+            line-height: 2;
+        }
+        @include maxW(767px) {
+            font-size: 2.4rem;
+            line-height: 30px;
+        }
+    }
+
+    &__year {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        letter-spacing: 0.35px;
+        height: 2.8rem;
+        overflow: hidden;
+
+        @include maxW(1024px) {
+            font-size: 1.2rem;
+            line-height: 2;
+        }
+        @include maxW(767px) {
+            font-size: 1.6rem;
+            line-height: 30px;
+        }
+    }
+
+    &__faq {
+        color: #0b0b0b;
+        line-height: 1.875;
+        letter-spacing: 0.25px;
+        margin-bottom: 24px;
+
+        > h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #3c3c3c;
+            letter-spacing: 0.4px;
+            line-height: 1.67;
+            margin-bottom: 5px;
+        }
+
+        li {
+            padding-left: 34px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 2px;
+                background: #0b0b0b;
+                border-radius: 100%;
+                left: 24px;
+                top: calc(50% - 2px);
+            }
+        }
+
+        @include maxW(767px) {
+            font-size: 1.6rem;
+            line-height: 25px;
+        }
+    }
+
+    .c-btn__modal {
+        text-align: right;
+
+        @include maxW(767px) {
+            text-align: center;
+        }
+    }
+
+    &__close {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
     }
 }

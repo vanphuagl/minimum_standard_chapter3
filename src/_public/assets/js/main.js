@@ -77,11 +77,22 @@ $(document).ready(function () {
   });
 
   /* --------------------------------- COMPANY -------------------------------- */
-  // // modal message
-  // $(".c-btn__modalclose,.c-modal__close").click(function () {
-  //   $(".c-modal").fadeOut(500);
-  //   $("body").removeClass("is-hidden");
-  // });
+  // click
+  $(".p-interview__item").on("click", function () {
+    var messageId = $(this).attr("id");
+    $(".c-message").attr("data-id", function () {
+      if ($(this).attr("data-id") == messageId) {
+        $(this).fadeIn(500);
+      }
+    });
+    $("body").addClass("overflow-hidden");
+  });
+
+  //close
+  $(".c-btn__modalclose,.c-message__close").click(function () {
+    $(".c-message").fadeOut(500);
+    $("body").removeClass("overflow-hidden");
+  });
 
   // var KEYCODE_ESC = 27;
   // $(document).keyup(function(e) {
@@ -94,15 +105,6 @@ $(document).ready(function () {
 
   // });
 
-  // $(".c-message__item").on("click", function () {
-  //   var messID = $(this).attr("id");
-  //   $(".c-modal").attr("data-id", function () {
-  //     if ($(this).attr("data-id") == messID) {
-  //       $(this).fadeIn(500);
-  //     }
-  //   });
-  //   $("body").addClass("is-hidden");
-  // });
   /* --------------------------- SCROLL ACTIVE LINK --------------------------- */
   $(window).scroll(function () {
     let scrollY = $(window).scrollTop();

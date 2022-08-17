@@ -123,11 +123,12 @@ section {
         background-color: $white-cl;
         z-index: -99;
         opacity: 0;
+        transition: height 0.6s ease, opacity 0.6s ease;
     }
-
+    
     &.scroll::after {
         height: 100vh;
-        z-index: 9;
+        z-index: 99;
         opacity: 1;
     }
 

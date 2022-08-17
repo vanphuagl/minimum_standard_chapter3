@@ -365,7 +365,7 @@
         margin: 0 auto;
 
         @include maxW(1024px) {
-            padding-left: 0 20px;
+            padding-left: 20px;
         }
         @include maxW(767px) {
             padding: 0;

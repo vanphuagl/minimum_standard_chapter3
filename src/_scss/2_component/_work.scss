@@ -328,6 +328,7 @@
         width: calc(50% - 10px);
         position: relative;
         margin-bottom: 26px;
+        transition: all 0.5s ease;
 
         @include maxW(1024px) {
             margin-bottom: 21px;
@@ -373,7 +374,7 @@
         flex-direction: column;
         z-index: 1;
         opacity: 0;
-        transition: opacity 0.5s ease;
+        transition: opacity 0.8s ease;
         cursor: pointer;
 
         @include mid(true);
@@ -384,7 +385,7 @@
         font-weight: bold;
         margin-top: 4px;
         line-height: 1;
-        color: $blue-cl;
+        color: #005384;
         text-transform: uppercase;
         letter-spacing: 0.7px;
     }

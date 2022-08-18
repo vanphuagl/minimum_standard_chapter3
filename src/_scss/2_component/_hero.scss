@@ -14,10 +14,11 @@
         overflow: hidden;
         position: relative;
         width: 100%;
-        height: 64.17vw;
-        max-height: 770px;
         margin-left: auto;
         z-index: 1;
+        // max-height: 770px;
+        // height: 64.17vw;
+        height: calc(100vh - 81px);
 
         .slick-active .is-zoomin {
             animation: zoom-in 6s infinite;

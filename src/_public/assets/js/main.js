@@ -105,9 +105,10 @@ $(document).ready(function () {
     }
   });
 
-  /* --------------------------- SCROLL ACTIVE LINK --------------------------- */
+  // /* --------------------------- SCROLL ACTIVE LINK --------------------------- */
   $(window).scroll(function () {
     let scrollY = $(window).scrollTop();
+    // console.log('scrollY', scrollY);
     let arr = [];
     $(".c-section").each(function () {
       arr.push($(this).attr("id"));
@@ -125,6 +126,10 @@ $(document).ready(function () {
             $(this).removeClass("is-active");
           }
         });
+      }
+
+      if (scrollY == 0) {
+        $(".c-header__link a").removeClass("is-active");
       }
     }
   });

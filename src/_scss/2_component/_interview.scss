@@ -94,6 +94,10 @@
             align-items: center;
             border: 2px solid #0080cc;
         }
+
+        &:hover {
+            border: 4px solid #005384;
+        }
     }
 
     &__item:hover &__zoom {
@@ -840,7 +844,7 @@
 
         > h3 {
             font-size: 1.8rem;
-            font-weight: 400;
+            font-weight: 500;
             color: #3c3c3c;
             letter-spacing: 0.4px;
             line-height: 1.67;

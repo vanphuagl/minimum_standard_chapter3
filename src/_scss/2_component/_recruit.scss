@@ -255,8 +255,16 @@
         margin-top: 52px;
         text-align: center;
 
+        @include maxW(1200px) {
+            margin-right: -37px;
+            margin-left: -37px;
+        }
+
         @include maxW(1024px) {
             margin-top: 44px;
+
+            margin-right: 0;
+            margin-left: 0;
         }
 
         @include maxW(767px) {

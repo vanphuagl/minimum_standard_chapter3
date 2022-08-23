@@ -30,9 +30,12 @@ footer
     padding-bottom: 20px;
     border-bottom: 1px solid #efefef;
 
+    padding-top: 5px;
+
     @include maxW(1024px) {
       flex-direction: column;
       padding-bottom: 5px;
+      padding-top: 0;
     }
     @include maxW(767px) {
       flex-direction: column;
@@ -53,9 +56,10 @@ footer
     align-items: center;
 
     @include maxW(1024px) {
-      margin-top: 20px;
+      margin-top: 24px;
     }
     @include maxW(767px) {
+      margin-top: 20px;
       display: none;
     }
   }
@@ -66,13 +70,23 @@ footer
     justify-content: space-between;
     flex-wrap: wrap;
     z-index: 999;
+
+    @include maxW(780px) {
+      width: 687px;
+    }
+    @include maxW(767px) {
+      width: 100%;
+    }
   }
 
   &__item {
-    margin-right: 8px;
+    // margin-right: 8px;
+    margin-right: 0;
 
     &:nth-child(2) {
-      margin-right: 14px;
+      //   margin-right: 14px;
+      margin-right: 8px;
+      margin-left: 8px;
     }
 
     // &:nth-child(2) {
@@ -84,24 +98,38 @@ footer
 
       &:nth-child(2) {
         margin-right: 0;
+        margin-left: 0;
       }
     }
 
-    @include maxW(1040px) {
+    @include maxW(1080px) {
       margin-right: -5px;
+      margin-left: -5px;
     }
 
     @include maxW(1024px) {
       margin-right: 17px;
+      margin-left: 0;
+    }
+
+    @include maxW(780px) {
+      margin-right: -8px;
+      margin-left: -8px;
+    }
+    @include maxW(767px) {
+      margin-right: 17px;
+      margin-left: 0;
     }
   }
 
   &__link {
     font-size: 1.6rem;
     line-height: 2;
-    padding: 12px 10px 6px;
+    // padding: 12px 10px 6px;
+    padding: 8px 10px 6px;
     position: relative;
     color: $blue-cl;
+    letter-spacing: 1px;
 
     &::before {
       content: "";
@@ -134,7 +162,7 @@ footer
     margin-left: 32px;
 
     .c-btn {
-      padding: 7px 12px 7px 34px;
+      padding: 11px 12px 12px 34px;
     }
 
     @include maxW(1024px) {
@@ -145,8 +173,16 @@ footer
       z-index: 99;
 
       .c-btn {
-        padding: 7px 12px 7px 34px;
+        // padding: 7px 12px 7px 34px;
+
         font-size: 1.8rem;
+        padding: 12px 12px 10px 34px;
+        margin-top: -1px;
+        margin-right: 1px;
+
+        &::after {
+          margin-left: 10px;
+        }
       }
     }
   }
@@ -163,9 +199,16 @@ footer
       text-decoration: underline;
       letter-spacing: 0.3px;
       display: inline-block;
-      padding: 8px 0;
+      // padding: 8px 0;
 
-      margin-right: 50px;
+      padding: 7px 0 8px;
+      margin-right: 2px;
+    }
+
+    @include maxW(1600px) {
+      > a {
+        margin-right: 50px;
+      }
     }
 
     @include maxW(1024px) {

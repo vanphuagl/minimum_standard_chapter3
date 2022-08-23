@@ -255,6 +255,12 @@
         margin-top: 52px;
         text-align: center;
 
+        .c-btn::after {
+            width: 30px;
+            height: 30px;
+            top: calc(50% - 15px);
+        }
+
         @include maxW(1200px) {
             margin-right: -37px;
             margin-left: -37px;

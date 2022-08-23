@@ -42,10 +42,10 @@
     }
 
     &__td {
-        padding-left: 20px;
+        padding-left: 20px !important;
 
         @include maxW(1024px) {
-            padding-left: 30px;
+            padding-left: 30px !important;
         }
         @include maxW(767px) {
             padding-left: 8px;

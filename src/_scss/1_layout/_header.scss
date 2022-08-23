@@ -224,6 +224,11 @@
                 margin-right: 0;
             }
         }
+
+        @include maxW(800px) {
+            margin: 0 -1px;
+        }
+
         @include maxW(767px) {
             margin-right: 0;
             margin-left: 0;

@@ -14,7 +14,12 @@
             line-height: 25px;
             padding: 14px 25px 14px 18px;
         }
+
         @include maxW(767px) {
+            border-bottom: 1px solid #cbcbcb;
+            border-top: none;
+            border-left: none;
+            border-right: none;
             display: block;
             padding: 7px 8px 6px;
         }
@@ -48,7 +53,7 @@
             padding-left: 30px !important;
         }
         @include maxW(767px) {
-            padding-left: 8px;
+            padding-left: 8px !important;
         }
     }
 

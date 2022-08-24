@@ -16,6 +16,12 @@ $(document).ready(function () {
     $(".c-header__menu").removeClass("is-activemenu");
   });
 
+  $(".c-header__btn").on("click", function () {
+    $(".c-header__icon").removeClass("active");
+    $("body").removeClass("overflow-hidden");
+    $(".c-header__menu").removeClass("is-activemenu");
+  });
+
   /* ---------------------------------- HERO ---------------------------------- */
   $(".p-hero__slide").slick({
     autoplay: true,

@@ -464,12 +464,16 @@
 
         @include maxW(1024px) {
             width: 288px;
+
+            // &.is-tabnone {
+            //     display: none !important;
+            // }    
         }
         @include maxW(767px) {
             width: 100%;
             max-width: 100%;
-            display: flex !important;
             flex-wrap: wrap;
+            display: flex;
 
             > figure {
                 width: 50%;

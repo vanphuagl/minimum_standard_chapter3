@@ -1,9 +1,6 @@
 // ---------------------------------------------------------------
 //  Home Page
 // ---------------------------------------------------------------
-.p-home {
-}
-
 .c-title__main {
     font-size: 3.4rem;
     font-weight: 500;
@@ -118,27 +115,20 @@
     }
 }
 
+.is-onlytab {
+    display: none;
+}
+.is-tabonly {
+    display: none;
+}
+
+
 @media screen and (min-width: 1025px) {
     .is-pcnone {
         display: none;
     }
 }
 
-@media only screen and (max-width: 767px) {
-    .is-spnone {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .is-tabnone {
-        display: none;
-    }
-}
-
-.is-onlytab {
-    display: none;
-}
 @media screen and (max-width: 1024px) {
     .is-onlytab {
         display: block;
@@ -147,5 +137,21 @@
     .is-brnone {
         display: none;
     }
+
+    .is-tabonly {
+        display: block;
+    }
+
+    .is-tabnone {
+        display: none;
+    }
 }
 
+@media only screen and (max-width: 767px) {
+    .is-spnone {
+        display: none;
+    }
+    .is-tabonly {
+        display: flex;
+    }
+}

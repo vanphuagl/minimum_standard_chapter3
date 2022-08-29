@@ -171,3 +171,64 @@ a:hover img {
 img {
     max-width: 100%;
 }
+
+
+//=================
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+a {
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+button {
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+}
+
+p,
+span,
+dl,
+dt,
+dd {
+    display: block;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.is-hidden {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    img {
+        max-width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 h5,
+    h6 {
+        line-height: 1.2;
+    }
+}

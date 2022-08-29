@@ -5,7 +5,7 @@
     line-height: 30px;
     color: #0b0b0b;
 
-    td {
+    td, th {
         border: 1px solid #cbcbcb;
         padding: 12px 25px 12px 18px;
         letter-spacing: 0.4px;
@@ -36,6 +36,8 @@
 
     &__th {
         background: #f7f7f7;
+        text-align: left;
+        font-weight: 400;
         min-width: 287px;
 
         @include maxW(1024px) {

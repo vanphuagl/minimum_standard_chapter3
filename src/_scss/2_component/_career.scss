@@ -88,6 +88,10 @@
         @include maxW(1024px) {
             margin-top: 32px;
             padding: 60px 0 67px;
+            // background: url("../../assets/img/career_bg_sp.jpg") top center no-repeat;
+        }
+        
+        @include maxW(768px) {
             background: url("../../assets/img/career_bg_sp.jpg") top center no-repeat;
         }
 
@@ -478,13 +482,20 @@
             > figure {
                 width: 50%;
                 position: relative;
-                padding-bottom: 120px;
+                // padding-bottom: 120px;
+                padding-bottom: 195px;
                 overflow: hidden;
 
                 img {
                     min-width: 100%;
                     @include mid(false);
                 }
+            }
+        }
+
+        @include maxW(540px) {
+            > figure {
+                padding-bottom: 120px;
             }
         }
     }

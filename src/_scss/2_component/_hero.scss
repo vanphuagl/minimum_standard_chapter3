@@ -33,12 +33,15 @@
         }
 
         @include maxW(1023px) {
-            max-height: 787px;
-            height: 100vh;
+            // max-height: 787px;
+            // height: 100vh;
         }
 
         @include maxW(767px) {
             // max-height: 600px;
+
+            max-height: 787px;
+            height: 100vh;
         }
     }
 
@@ -68,13 +71,12 @@
 
         @include maxW(1023px) {
             img {
-                height: 767px;
+                // height: 767px;
             }
         }
         @include maxW(767px) {
             img {
                 // height: 600px;
-                height: 100vh;
             }
         }
     }
@@ -161,6 +163,7 @@
             position: relative;
             padding-bottom: 9px;
             font-weight: 500;
+            transition: all 0.3s;
 
             &::after {
                 content: "";
@@ -171,6 +174,10 @@
                 background-color: $blue-cl;
                 left: 50%;
                 animation: scrolldown 2s linear infinite;
+            }
+
+            &:hover {
+                opacity: 0.7;
             }
         }
 

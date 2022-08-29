@@ -20,18 +20,6 @@
 //------------------------------------------------------------
 // hidden
 //------------------------------------------------------------
-.is-onlysp {
-    display: none;
-}
-@include sp {
-    .is-onlypc {
-        display: none;
-    }
-
-    .is-onlysp {
-        display: block;
-    }
-}
 
 .is-hidden {
     display: none;
@@ -40,6 +28,7 @@
 .is-onlytab {
     display: none;
 }
+
 .is-tabonly {
     display: none;
 }
@@ -72,6 +61,7 @@
     .is-spnone {
         display: none;
     }
+
     .is-tabonly {
         display: flex;
     }

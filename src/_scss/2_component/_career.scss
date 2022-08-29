@@ -270,8 +270,8 @@
       }
 
       &:nth-child(3) .p-career__content {
-        padding-top: 20px;
-        padding-bottom: 18px;
+        padding-top: 18px;
+        padding-bottom: 21px;
       }
 
       &:last-child .p-career__content {
@@ -631,6 +631,13 @@
 
     @include maxW(1024px) {
       margin-bottom: 9px;
+
+      &::before {
+        width: 16px;
+        height: 16px;
+        left: 2px;
+        top: 3px;
+      }
     }
     @include maxW(767px) {
       font-size: 1.6rem;
@@ -670,6 +677,16 @@
   &__blockmain {
     > span {
       display: inline;
+    }
+
+
+    @include maxW(1024px) {
+        position: relative;
+        left: 7px;
+        top: -3px;
+    }
+    @include maxW(767px) {
+        position: unset;
     }
   }
 

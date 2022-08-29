@@ -1,745 +1,750 @@
 /* --------------------------------- CAREER --------------------------------- */
 .p-career {
-    padding-top: 94px;
+  padding-top: 94px;
+
+  @include maxW(1024px) {
+    padding: 54px 0 0;
+
+    &__blockitem:nth-child(2) &__blocknote {
+      margin-top: 9px;
+    }
+  }
+  @include maxW(767px) {
+    padding: 41px 0 0;
+
+    &__blockitem:nth-child(2) &__blocknote {
+      margin-top: -1px;
+      margin-left: 4px;
+      line-height: 25px;
+    }
+
+    &__blockitem:nth-child(3) &__blockmain {
+      font-size: 1.6rem;
+      line-height: 21px;
+
+      span {
+        font-size: 1.4rem;
+        letter-spacing: 0.35px;
+      }
+    }
+  }
+
+  .l-container {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  &__heading {
+    max-width: 1080px;
+    margin: 0 auto;
+
+    > h2 {
+      text-align: center;
+    }
+
+    > p {
+      text-align: center;
+      margin-top: 20px;
+    }
 
     @include maxW(1024px) {
-        padding: 54px 0 0;
+      padding: 0 20px;
 
-        &__blockitem:nth-child(2) &__blocknote {
-            margin-top: 9px;
-        }
+      > h2 {
+        font-size: 2.6rem;
+        line-height: 44px;
+        margin-bottom: 22px;
+      }
     }
     @include maxW(767px) {
-        padding: 36px 0 0;
+      padding: 0 10px;
 
-        &__blockitem:nth-child(2) &__blocknote {
-            margin-top: -1px;
-            margin-left: 4px;
-            line-height: 25px;
-        }
+      > h2 {
+        text-align: left;
+        padding: 0 10px;
+        margin-bottom: 10px;
+        font-size: 2.4rem;
+        line-height: 30px;
+      }
 
-        &__blockitem:nth-child(3) &__blockmain {
-            font-size: 1.6rem;
-            line-height: 21px;
+      > p {
+        text-align: left;
+        padding: 0 10px;
+        line-height: 22px;
+        margin-top: 12px;
+      }
+    }
+  }
 
-            span {
-                font-size: 1.4rem;
-                letter-spacing: 0.35px;
-            }
-        }
+  /* -------------------------------- backgroun ------------------------------- */
+  &__bg {
+    margin-top: 99px;
+
+    position: relative;
+    background: url("../../assets/img/career_bg.jpg") top center no-repeat;
+    background-size: cover;
+    padding: 96px 0 107px;
+
+    @include maxW(1024px) {
+      margin-top: 32px;
+      padding: 60px 0 67px;
+      // background: url("../../assets/img/career_bg_sp.jpg") top center no-repeat;
     }
 
-    .l-container {
-        max-width: 100%;
-        overflow: hidden;
+    @include maxW(768px) {
+      background: url("../../assets/img/career_bg_sp.jpg") top center no-repeat;
     }
 
-    &__heading {
-        max-width: 1080px;
-        margin: 0 auto;
+    @include maxW(767px) {
+      margin-top: 34px;
+      padding: 0;
+      background: unset;
+    }
+  }
 
-        > h2 {
-            text-align: center;
-        }
+  &__figure {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 70%;
 
-        > p {
-            text-align: center;
-            margin-top: 20px;
-        }
+    img {
+      @include mid(false);
+      min-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.3s ease;
+    }
+  }
 
-        @include maxW(1024px) {
-            padding: 0 20px;
+  &__inner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 120px;
 
-            > h2 {
-                font-size: 2.6rem;
-                line-height: 44px;
-                margin-bottom: 22px;
-            }
-        }
-        @include maxW(767px) {
-            padding: 0 10px;
+    @include maxW(1024px) {
+      padding: 0 20px;
+    }
+    @include maxW(767px) {
+      padding: 0 10px;
+    }
+  }
 
-            > h2 {
-                text-align: left;
-                padding: 0 10px;
-                margin-bottom: 10px;
-                font-size: 2.4rem;
-                line-height: 30px;
-            }
+  &__box {
+    background-color: $white-cl;
+    width: 100%;
+    max-width: 489px;
+    padding: 38px 25px 31px 40px;
 
-            > p {
-                text-align: left;
-                padding: 0 10px;
-                line-height: 22px;
-                margin-top: 12px;
-            }
-        }
+    > h2 {
+      letter-spacing: 0.8px;
+      line-height: 45px;
     }
 
-    /* -------------------------------- backgroun ------------------------------- */
-    &__bg {
-        margin-top: 99px;
-
-        position: relative;
-        background: url("../../assets/img/career_bg.jpg") top center no-repeat;
-        background-size: cover;
-        padding: 96px 0 107px;
-
-        @include maxW(1024px) {
-            margin-top: 32px;
-            padding: 60px 0 67px;
-            // background: url("../../assets/img/career_bg_sp.jpg") top center no-repeat;
-        }
-        
-        @include maxW(768px) {
-            background: url("../../assets/img/career_bg_sp.jpg") top center no-repeat;
-        }
-
-        @include maxW(767px) {
-            margin-top: 34px;
-            padding: 0;
-            background: unset;
-        }
+    > p {
+      letter-spacing: 0.35px;
+      line-height: 1.875;
+      margin-top: 12px;
     }
 
-    &__figure {
-        position: relative;
+    @include maxW(1024px) {
+      max-width: 383px;
+      padding: 35px 40px;
+
+      > p {
+        margin-top: 8px;
+        line-height: 25px;
+      }
+    }
+    @include maxW(767px) {
+      max-width: 100%;
+      padding: 40px 10px 33px;
+
+      > h2 {
+        line-height: 30px;
+        letter-spacing: 1.2px;
+      }
+
+      > p {
+        margin-top: 12px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  /* ---------------------------------- plan ---------------------------------- */
+  &__plan {
+    position: relative;
+    overflow: hidden;
+    margin-top: 74px;
+
+    @include maxW(1024px) {
+      margin-top: 0;
+    }
+  }
+
+  &__box2 {
+    width: 100%;
+    max-width: 801px;
+    position: relative;
+    padding: 96px 64px 92px 0;
+    color: $blue-cl;
+
+    > h2 {
+      letter-spacing: 0.8px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100vw;
+      top: 0;
+      right: 0;
+      background-color: #f8f8f8;
+      z-index: -1;
+    }
+
+    @include maxW(1024px) {
+      // padding: 50px 38px 51px 21px;
+      padding: 30px 38px 51px 21px;
+      max-width: calc(100vw - 120px);
+
+      > h2 {
+        letter-spacing: 1.5px;
+        margin-bottom: 23px;
+      }
+    }
+    @include maxW(767px) {
+      padding: 37px 10px 32px;
+      max-width: 100%;
+
+      > h2 {
+        margin-bottom: 27px;
+      }
+    }
+  }
+
+  &__planlist {
+    padding-left: 40px;
+    margin-top: 39px;
+
+    @include maxW(1024px) {
+      margin-top: 0;
+    }
+    @include maxW(767px) {
+      padding-left: 10px;
+    }
+  }
+
+  &__planitem {
+    margin-bottom: 18px;
+
+    > h3 {
+      font-size: 2.5rem;
+      line-height: 1.52;
+      font-weight: bold;
+      letter-spacing: 0.7px;
+      margin-bottom: 15px;
+    }
+
+    &:nth-child(2) .u-padding2 > p {
+      margin-top: -5px;
+    }
+
+    @include maxW(1024px) {
+      margin-bottom: 9px;
+
+      > h3 {
+        line-height: 31px;
+        margin-bottom: 6px;
+      }
+
+      &:nth-child(2) .u-padding2 > p {
+        margin-top: 0;
+      }
+
+      &:nth-child(1) .p-career__content {
+        padding-bottom: 46px;
+      }
+
+      &:nth-child(3) .p-career__content {
+        padding-top: 20px;
+        padding-bottom: 18px;
+      }
+
+      &:last-child .p-career__content {
+        font-size: 1.4rem;
+        padding-bottom: 16px;
+      }
+    }
+    @include maxW(767px) {
+      margin-bottom: 15px;
+
+      > h3 {
+        font-size: 1.8rem;
+        line-height: 30px;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+
+      &:nth-child(1) .p-career__content {
+        padding: 11px 0 7px 27px;
+      }
+
+      &:nth-child(3) .p-career__content {
+        padding: 22px 0 18px 27px;
+      }
+
+      &:last-child {
+        > h3 {
+          margin-top: -4px;
+        }
+      }
+
+      &:last-child .p-career__content {
+        // padding-top: 24px;
+        // padding-bottom: 24px;
+        // font-size: 1.6rem;
+        padding-top: 23px;
+        padding-bottom: 0px;
+        font-size: 1.6rem;
+        margin-bottom: -6px;
+
+        p:last-child {
+          margin-top: -10px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    margin-left: 50px;
+    border-left: 1px solid $blue-cl;
+    padding: 13px 0 13px 88px;
+    line-height: 1.75;
+    letter-spacing: 0.4px;
+    font-size: 1.6rem;
+
+    @include maxW(1024px) {
+      // padding: 16px 0 19px 41px;
+      padding: 16px 0 24px 41px;
+    }
+    @include maxW(767px) {
+      margin-left: 30px;
+      font-size: 1.4rem;
+      line-height: 22px;
+      // padding: 11px 0 7px 27px;
+      padding: 24px 0 16px 27px;
+    }
+  }
+
+  &__ask {
+    text-align: center;
+    width: 100%;
+    margin: 29px 0 0 40px;
+    padding: 40px 0 42px;
+    position: relative;
+
+    > p {
+      color: #ff5800;
+      font-size: 2.5rem;
+      line-height: 1.52;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      padding-right: 5px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 41px;
+      height: 43px;
+      background: url("../../assets/img/icon_border.svg") center no-repeat;
+      background-size: cover;
+      left: 39px;
+      top: 12px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 41px;
+      height: 43px;
+      background: url("../../assets/img/icon_border.svg") center no-repeat;
+      background-size: cover;
+      right: 45px;
+      bottom: 12px;
+      transform: rotate(180deg);
+    }
+
+    @include maxW(1024px) {
+      padding: 35px 0 42px;
+
+      > p {
+        font-size: 2.1rem;
+        line-height: 38px;
+        padding: 0;
+      }
+
+      &::after {
+        right: 40px;
+        bottom: 8px;
+      }
+    }
+    @include maxW(767px) {
+      margin: 0;
+      padding: 35px 0 43px;
+
+      > p {
+        font-size: 1.8rem;
+        line-height: 26px;
+      }
+
+      &::before {
+        width: 30px;
+        height: 32px;
+        left: -10px;
+        top: 5px;
+      }
+
+      &::after {
+        width: 30px;
+        height: 32px;
+        right: -7px;
+        bottom: 8px;
+      }
+    }
+  }
+
+  /* --------------------------------- benefit -------------------------------- */
+  &__benefit {
+    max-width: 1080px;
+    margin: 0 auto;
+
+    @include maxW(1024px) {
+      padding-left: 20px;
+    }
+    @include maxW(767px) {
+      padding: 0;
+    }
+  }
+
+  &__box3 {
+    padding-left: 60px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: calc(50vw + 600px - 120px);
+      top: 0;
+      left: 60px;
+      background-color: #fdfbef;
+      z-index: -1;
+    }
+
+    @include maxW(1024px) {
+      padding-left: 0;
+    }
+    @include maxW(767px) {
+      padding-left: 10px;
+      margin-top: 40px;
+      background-color: $white-cl;
+    }
+  }
+
+  &__listimg {
+    width: 40%;
+    max-width: 400px;
+
+    > figure {
+      img {
         width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    @include maxW(1024px) {
+      width: 288px;
+
+      // &.is-tabnone {
+      //     display: none !important;
+      // }
+    }
+    @include maxW(767px) {
+      width: 100%;
+      max-width: 100%;
+      flex-wrap: wrap;
+      display: flex;
+
+      > figure {
+        width: 50%;
+        position: relative;
+        // padding-bottom: 120px;
+        padding-bottom: 195px;
         overflow: hidden;
-        padding-bottom: 70%;
 
         img {
-            @include mid(false);
-            min-width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: 0.3s ease;
+          min-width: 100%;
+          @include mid(false);
         }
+      }
     }
 
-    &__inner {
-        max-width: 1200px;
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 120px;
+    @include maxW(540px) {
+      > figure {
+        padding-bottom: 120px;
+      }
+    }
+  }
 
-        @include maxW(1024px) {
-            padding: 0 20px;
-        }
-        @include maxW(767px) {
-            padding: 0 10px;
-        }
+  &__content2 {
+    width: calc(60% - 31px);
+    padding-top: 57px;
+    padding-right: 20px;
+
+    @include maxW(1024px) {
+      width: calc(100% - 288px - 20px);
+      padding-right: 0;
+      padding-top: 15px;
+      position: relative;
+      top: 18px;
+    }
+    @include maxW(767px) {
+      width: 100%;
+      max-width: 100%;
+      padding: 37px 15px 4px 10px;
+      background: #fdfbef;
+      top: 0;
+    }
+  }
+
+  &__block {
+    margin-bottom: 56px;
+
+    > h3 {
+      color: #ff5800;
+      font-size: 2.8rem;
+      line-height: 1.6;
+      font-weight: 500;
+      margin-bottom: 4px;
+      letter-spacing: 0.8px;
+
+      > span {
+        display: inline-block;
+      }
     }
 
-    &__box {
-        background-color: $white-cl;
-        width: 100%;
-        max-width: 489px;
-        padding: 38px 25px 31px 40px;
-
-        > h2 {
-            letter-spacing: 0.8px;
-            line-height: 45px;
-        }
-
-        > p {
-            letter-spacing: 0.35px;
-            line-height: 1.875;
-            margin-top: 12px;
-        }
-
-        @include maxW(1024px) {
-            max-width: 383px;
-            padding: 35px 40px;
-
-            > p {
-                margin-top: 8px;
-                line-height: 25px;
-            }
-        }
-        @include maxW(767px) {
-            max-width: 100%;
-            padding: 40px 10px 33px;
-
-            > h2 {
-                line-height: 30px;
-            }
-
-            > p {
-                margin-top: 12px;
-                line-height: 22px;
-            }
-        }
+    &:nth-child(2) {
+      > h3 {
+        margin-bottom: 11px;
+      }
     }
 
-    /* ---------------------------------- plan ---------------------------------- */
-    &__plan {
-        position: relative;
-        overflow: hidden;
-        margin-top: 74px;
+    @include maxW(1024px) {
+      //   margin-bottom: 49px;
+      margin-bottom: 28px;
 
-        @include maxW(1024px) {
-            margin-top: 0;
-        }
-    }
+      > h3 {
+        margin-bottom: 3px;
+      }
 
-    &__box2 {
-        width: 100%;
-        max-width: 801px;
-        position: relative;
-        padding: 96px 64px 92px 0;
-        color: $blue-cl;
-
-        > h2 {
-            letter-spacing: 0.8px;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            height: 100%;
-            width: 100vw;
-            top: 0;
-            right: 0;
-            background-color: #f8f8f8;
-            z-index: -1;
-        }
-
-        @include maxW(1024px) {
-            // padding: 50px 38px 51px 21px;
-            padding: 30px 38px 51px 21px;
-            max-width: calc(100vw - 120px);
-
-            > h2 {
-                letter-spacing: 1.5px;
-                margin-bottom: 23px;
-            }
-        }
-        @include maxW(767px) {
-            padding: 37px 10px 32px;
-            max-width: 100%;
-
-            > h2 {
-                margin-bottom: 27px;
-            }
-        }
-    }
-
-    &__planlist {
-        padding-left: 40px;
-        margin-top: 39px;
-
-        @include maxW(1024px) {
-            margin-top: 0;
-        }
-        @include maxW(767px) {
-            padding-left: 10px;
-        }
-    }
-
-    &__planitem {
-        margin-bottom: 18px;
-
+      &:nth-child(2) {
         > h3 {
-            font-size: 2.5rem;
-            line-height: 1.52;
-            font-weight: bold;
-            letter-spacing: 0.7px;
-            margin-bottom: 15px;
+          margin-bottom: 3px;
         }
-
-        &:nth-child(2) .u-padding2 > p {
-            margin-top: -5px;
-        }
-
-        @include maxW(1024px) {
-            margin-bottom: 9px;
-
-            > h3 {
-                line-height: 31px;
-                margin-bottom: 6px;
-            }
-
-            &:nth-child(2) .u-padding2 > p {
-                margin-top: 0;
-            }
-
-            &:nth-child(1) .p-career__content {
-                padding-bottom: 46px;
-            }
-
-            &:nth-child(3) .p-career__content {
-                padding-top: 20px;
-                padding-bottom: 18px;
-            }
-
-            &:last-child .p-career__content {
-                font-size: 1.4rem;
-                padding-bottom: 16px;
-            }
-        }
-        @include maxW(767px) {
-            margin-bottom: 15px;
-
-            > h3 {
-                font-size: 1.8rem;
-                line-height: 30px;
-                font-weight: 500;
-                margin-bottom: 5px;
-            }
-
-            &:nth-child(1) .p-career__content {
-                padding: 8px 0 7px 27px;
-            }
-
-            &:nth-child(3) .p-career__content {
-                padding: 8px 0 7px 27px;
-            }
-
-            &:last-child {
-                > h3 {
-                    margin-top: -4px;
-                }
-            }
-
-            &:last-child .p-career__content {
-                padding-top: 24px;
-                padding-bottom: 24px;
-                font-size: 1.6rem;
-
-                p:last-child {
-                    margin-top: -13px;
-                }
-            }
-        }
+      }
     }
+    @include maxW(767px) {
+      margin-bottom: 29px;
 
-    &__content {
-        margin-left: 50px;
-        border-left: 1px solid $blue-cl;
-        padding: 13px 0 13px 88px;
-        line-height: 1.75;
-        letter-spacing: 0.4px;
-        font-size: 1.6rem;
+      > h3 {
+        font-size: 2.2rem;
+        line-height: 30px;
+        margin-bottom: 11px;
+      }
 
-        @include maxW(1024px) {
-            // padding: 16px 0 19px 41px;
-            padding: 16px 0 24px 41px;
-        }
-        @include maxW(767px) {
-            margin-left: 30px;
-            font-size: 1.4rem;
-            line-height: 22px;
-            // padding: 11px 0 7px 27px;
-            padding: 24px 0 16px 27px;
-        }
-    }
-
-    &__ask {
-        text-align: center;
-        width: 100%;
-        margin: 29px 0 0 40px;
-        padding: 40px 0 42px;
-        position: relative;
-
-        > p {
-            color: #ff5800;
-            font-size: 2.5rem;
-            line-height: 1.52;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-            padding-right: 5px;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            width: 41px;
-            height: 43px;
-            background: url("../../assets/img/icon_border.svg") center no-repeat;
-            background-size: cover;
-            left: 39px;
-            top: 12px;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            width: 41px;
-            height: 43px;
-            background: url("../../assets/img/icon_border.svg") center no-repeat;
-            background-size: cover;
-            right: 45px;
-            bottom: 12px;
-            transform: rotate(180deg);
-        }
-
-        @include maxW(1024px) {
-            padding: 35px 0 42px;
-
-            > p {
-                font-size: 2.1rem;
-                line-height: 38px;
-                padding: 0;
-            }
-
-            &::after {
-                right: 40px;
-                bottom: 8px;
-            }
-        }
-        @include maxW(767px) {
-            margin: 0;
-            padding: 35px 0 43px;
-
-            > p {
-                font-size: 1.8rem;
-                line-height: 26px;
-            }
-
-            &::before {
-                width: 30px;
-                height: 32px;
-                left: -10px;
-                top: 5px;
-            }
-
-            &::after {
-                width: 30px;
-                height: 32px;
-                right: -7px;
-                bottom: 8px;
-            }
-        }
-    }
-
-    /* --------------------------------- benefit -------------------------------- */
-    &__benefit {
-        max-width: 1080px;
-        margin: 0 auto;
-
-        @include maxW(1024px) {
-            padding-left: 20px;
-        }
-        @include maxW(767px) {
-            padding: 0;
-        }
-    }
-
-    &__box3 {
-        padding-left: 60px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        &::after {
-            content: "";
-            position: absolute;
-            height: 100%;
-            width: calc(50vw + 600px - 120px);
-            top: 0;
-            left: 60px;
-            background-color: #fdfbef;
-            z-index: -1;
-        }
-
-        @include maxW(1024px) {
-            padding-left: 0;
-        }
-        @include maxW(767px) {
-            padding-left: 10px;
-            margin-top: 30px;
-            background-color: $white-cl;
-        }
-    }
-
-    &__listimg {
-        width: 40%;
-        max-width: 400px;
-
-        > figure {
-            img {
-                width: 100%;
-                object-fit: cover;
-            }
-        }
-
-        @include maxW(1024px) {
-            width: 288px;
-
-            // &.is-tabnone {
-            //     display: none !important;
-            // }    
-        }
-        @include maxW(767px) {
-            width: 100%;
-            max-width: 100%;
-            flex-wrap: wrap;
-            display: flex;
-
-            > figure {
-                width: 50%;
-                position: relative;
-                // padding-bottom: 120px;
-                padding-bottom: 195px;
-                overflow: hidden;
-
-                img {
-                    min-width: 100%;
-                    @include mid(false);
-                }
-            }
-        }
-
-        @include maxW(540px) {
-            > figure {
-                padding-bottom: 120px;
-            }
-        }
-    }
-
-    &__content2 {
-        width: calc(60% - 31px);
-        padding-top: 57px;
-        padding-right: 20px;
-
-        @include maxW(1024px) {
-            width: calc(100% - 288px - 20px);
-            padding-right: 0;
-            padding-top: 15px;
-            position: relative;
-            top: 18px;
-        }
-        @include maxW(767px) {
-            width: 100%;
-            max-width: 100%;
-            padding: 37px 15px 4px 10px;
-            background: #fdfbef;
-            top: 0;
-        }
-    }
-
-    &__block {
-        margin-bottom: 56px;
-
+      &:nth-child(2) {
         > h3 {
-            color: #ff5800;
-            font-size: 2.8rem;
-            line-height: 1.6;
-            font-weight: 500;
-            margin-bottom: 4px;
-            letter-spacing: 0.8px;
-
-            > span {
-                display: inline-block;
-            }
+          margin-bottom: 15px;
         }
+      }
+    }
+  }
 
-        &:nth-child(2) {
-            > h3 {
-                margin-bottom: 11px;
-            }
-        }
+  &__block:nth-child(2) &__blocknote {
+    padding-left: 7px;
 
-        @include maxW(1024px) {
-            //   margin-bottom: 49px;
-            margin-bottom: 28px;
+    @include maxW(1024px) {
+      font-size: 1.6rem;
+      line-height: 28px;
+      margin-top: 7px;
+    }
+    @include maxW(767px) {
+      padding-left: 0;
+      font-size: 1.4rem;
+    }
+  }
 
-            > h3 {
-                margin-bottom: 3px;
-            }
+  &__block:nth-child(2) &__listchild {
+    margin-top: 0;
 
-            &:nth-child(2) {
-                > h3 {
-                    margin-bottom: 3px;
-                }
-            }
-        }
-        @include maxW(767px) {
-            margin-bottom: 29px;
+    @include maxW(1024px) {
+      font-size: 1.6rem;
+      line-height: 28px;
+    }
+    @include maxW(767px) {
+      position: relative;
+      top: -1px;
+      line-height: 24px;
+      font-size: 1.4rem;
+    }
+  }
 
-            > h3 {
-                font-size: 2.2rem;
-                line-height: 30px;
-                margin-bottom: 11px;
-            }
+  &__blockitem {
+    font-size: 1.8rem;
+    line-height: 1.67;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #3c3c3c;
+    position: relative;
+    padding-left: 18px;
+    letter-spacing: 0.55px;
 
-            &:nth-child(2) {
-                > h3 {
-                    margin-bottom: 15px;
-                }
-            }
-        }
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background-color: #3c3c3c;
+      position: absolute;
+      left: 2px;
+      top: 14px;
     }
 
-    &__block:nth-child(2) &__blocknote {
-        padding-left: 7px;
+    @include maxW(1024px) {
+      margin-bottom: 9px;
+    }
+    @include maxW(767px) {
+      font-size: 1.6rem;
+      // font-weight: bold;
+      line-height: 25px;
+      padding-left: 15px;
+      letter-spacing: 0.2px;
+      margin-bottom: 14px;
 
-        @include maxW(1024px) {
-            font-size: 1.6rem;
-            line-height: 28px;
-            margin-top: 7px;
-        }
-        @include maxW(767px) {
-            padding-left: 0;
-            font-size: 1.4rem;
-        }
+      .u-mbot1,
+      .u-mbot1 {
+        margin-bottom: 8px;
+      }
+
+      .u-mbot3 {
+        margin-bottom: 11px;
+      }
+
+      &:nth-child(3),
+      &:nth-child(5) {
+        margin-top: -6px;
+      }
+
+      &:nth-child(6) {
+        margin-top: -3px;
+      }
+
+      &::before {
+        width: 7px;
+        height: 7px;
+        top: 10px;
+        left: 2px;
+      }
+    }
+  }
+
+  &__blockmain {
+    > span {
+      display: inline;
+    }
+  }
+
+  &__blocknote {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
+    margin-top: 12px;
+    letter-spacing: 0.35px;
+    margin-left: -1px;
+
+    @include maxW(1024px) {
+      font-size: 1.4rem;
+      line-height: 25px;
+      margin-top: 7px;
+    }
+    @include maxW(767px) {
+      font-size: 1.2rem;
+      line-height: 16px;
+      font-weight: 400;
+      margin-top: 3px;
+      margin-left: -5px;
+    }
+  }
+
+  &__listchild {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
+    margin-top: 11px;
+
+    @include maxW(1024px) {
+      font-size: 1.4rem;
+      line-height: 25px;
+      margin-top: 6px;
+      margin-bottom: 11px;
+      position: relative;
+      top: 2px;
     }
 
-    &__block:nth-child(2) &__listchild {
-        margin-top: 0;
+    @include maxW(767px) {
+      margin-top: 11px;
+    }
+  }
 
-        @include maxW(1024px) {
-            font-size: 1.6rem;
-            line-height: 28px;
-        }
-        @include maxW(767px) {
-            position: relative;
-            top: -1px;
-            line-height: 24px;
-            font-size: 1.4rem;
-        }
+  &__itemchild {
+    position: relative;
+    padding-left: 22px;
+
+    &::before {
+      content: "";
+      width: 2px;
+      height: 2px;
+      border-radius: 100%;
+      background: #3c3c3c;
+      position: absolute;
+      left: 13px;
+      top: 12px;
     }
 
-    &__blockitem {
-        font-size: 1.8rem;
-        line-height: 1.67;
-        font-weight: 500;
-        margin-bottom: 10px;
-        color: #3c3c3c;
-        position: relative;
-        padding-left: 18px;
-        letter-spacing: 0.55px;
+    @include maxW(1024px) {
+      padding-left: 19px;
 
-        &::before {
-            content: "";
-            width: 8px;
-            height: 8px;
-            border-radius: 100%;
-            background-color: #3c3c3c;
-            position: absolute;
-            left: 2px;
-            top: 14px;
-        }
-
-        @include maxW(1024px) {
-            margin-bottom: 9px;
-        }
-        @include maxW(767px) {
-            font-size: 1.6rem;
-            // font-weight: bold;
-            line-height: 25px;
-            padding-left: 15px;
-            letter-spacing: 0.2px;
-            margin-bottom: 14px;
-
-            .u-mbot1,
-            .u-mbot1 {
-                margin-bottom: 8px;
-            }
-
-            .u-mbot3 {
-                margin-bottom: 11px;
-            }
-
-            &:nth-child(3),
-            &:nth-child(5) {
-                margin-top: -6px;
-            }
-
-            &:nth-child(6) {
-                margin-top: -3px;
-            }
-
-            &::before {
-                width: 7px;
-                height: 7px;
-                top: 10px;
-                left: 2px;
-            }
-        }
+      &::before {
+        left: 11px;
+        top: 12px;
+      }
     }
+    @include maxW(767px) {
+      padding-left: 9px;
 
-    &__blockmain {
-        > span {
-            display: inline;
-        }
+      &::before {
+        top: 10px;
+        left: 1px;
+      }
     }
-
-    &__blocknote {
-        font-size: 1.6rem;
-        font-weight: 300;
-        line-height: 1.75;
-        margin-top: 12px;
-        letter-spacing: 0.35px;
-        margin-left: -1px;
-
-        @include maxW(1024px) {
-            font-size: 1.4rem;
-            line-height: 25px;
-            margin-top: 7px;
-        }
-        @include maxW(767px) {
-            font-size: 1.2rem;
-            line-height: 16px;
-            font-weight: 400;
-            margin-top: 3px;
-            margin-left: -5px;
-        }
-    }
-
-    &__listchild {
-        font-size: 1.6rem;
-        font-weight: 300;
-        line-height: 1.75;
-        margin-top: 11px;
-
-        @include maxW(1024px) {
-            font-size: 1.4rem;
-            line-height: 25px;
-            margin-top: 6px;
-            margin-bottom: 11px;
-            position: relative;
-            top: 2px;
-        }
-
-        @include maxW(767px) {
-            margin-top: 11px;
-        }
-    }
-
-    &__itemchild {
-        position: relative;
-        padding-left: 22px;
-
-        &::before {
-            content: "";
-            width: 2px;
-            height: 2px;
-            border-radius: 100%;
-            background: #3c3c3c;
-            position: absolute;
-            left: 13px;
-            top: 12px;
-        }
-
-        @include maxW(1024px) {
-            padding-left: 19px;
-
-            &::before {
-                left: 11px;
-                top: 12px;
-            }
-        }
-        @include maxW(767px) {
-            padding-left: 9px;
-
-            &::before {
-                top: 10px;
-                left: 1px;
-            }
-        }
-    }
+  }
 }

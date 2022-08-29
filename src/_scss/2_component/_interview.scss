@@ -60,7 +60,7 @@
 
             > p {
                 line-height: 22px;
-                margin-top: 5px;
+                margin-top: 11px;
             }
         }
     }
@@ -344,7 +344,7 @@
         }
         @include maxW(767px) {
             margin-top: 21px;
-            padding: 54px 10px 3px;
+            padding: 38px 10px 20px;
         }
     }
 
@@ -472,6 +472,7 @@
         @include maxW(767px) {
             width: 100%;
             max-width: 240px;
+            margin-top: 3px;
         }
     }
 
@@ -629,6 +630,7 @@
         }
         @include maxW(767px) {
             width: 38px;
+            top: -1px;
         }
     }
 

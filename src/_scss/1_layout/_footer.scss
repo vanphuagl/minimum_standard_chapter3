@@ -2,262 +2,262 @@
 footer
 ------------------------------------------------------------*/
 .c-footer {
-  padding-top: 19px;
-  border-top: 1px solid #0080cc;
-  margin-top: 50px;
-
-  @include maxW(1024px) {
-    padding-top: 31px;
-    margin-top: 59px;
-  }
-  @include maxW(767px) {
-    padding-top: 10px;
-  }
-
-  .l-container {
-    max-width: 100%;
-  }
-
-  &__inner {
-    width: 100%;
-    max-width: 1200px;
-    position: relative;
-    margin: 0 auto;
-    // padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    // padding-bottom: 20px;
-    // padding-top: 5px;
-    border-bottom: 1px solid #efefef;
-
-    padding: 5px 20px 20px;
+    padding-top: 13px;
+    border-top: 1px solid #0080cc;
+    margin-top: 50px;
 
     @include maxW(1024px) {
-      flex-direction: column;
-      padding-bottom: 5px;
-      padding-top: 0;
+        padding-top: 31px;
+        margin-top: 59px;
     }
     @include maxW(767px) {
-      flex-direction: column;
-      padding: 0 10px 10px;
-      margin-bottom: 1px;
-    }
-  }
-
-  &__logo,
-  &__nav {
-    @include maxW(1024px) {
-      width: 100%;
-    }
-  }
-
-  &__logo {
-    > a {
-      position: relative;
-      top: 9px;
+        padding-top: 10px;
     }
 
-    @include maxW(1024px) {
-      > a {
-        position: unset;
-      }
-    }
-  }
-
-  &__menu {
-    display: flex;
-    align-items: center;
-
-    @include maxW(1024px) {
-      margin-top: 24px;
-    }
-    @include maxW(767px) {
-      margin-top: 20px;
-      display: none;
-    }
-  }
-
-  &__list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    z-index: 999;
-
-    @include maxW(780px) {
-      width: 687px;
-    }
-    @include maxW(767px) {
-      width: 100%;
-    }
-  }
-
-  &__item {
-    // margin-right: 8px;
-    margin-right: 0;
-
-    &:nth-child(2) {
-      //   margin-right: 14px;
-      margin-right: 8px;
-      margin-left: 8px;
+    .l-container {
+        max-width: 100%;
     }
 
-    // &:nth-child(2) {
-    //   margin-right: 27px;
-    // }
+    &__inner {
+        width: 100%;
+        max-width: 1200px;
+        position: relative;
+        margin: 0 auto;
+        // padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // padding-bottom: 20px;
+        // padding-top: 5px;
+        border-bottom: 1px solid #efefef;
 
-    @include maxW(1100px) {
-      margin-right: 0;
+        padding: 5px 20px 20px;
 
-      &:nth-child(2) {
-        margin-right: 0;
-        margin-left: 0;
-      }
-    }
-
-    @include maxW(1080px) {
-      margin-right: -5px;
-      margin-left: -5px;
-    }
-
-    @include maxW(1024px) {
-      margin-right: 17px;
-      margin-left: 0;
-    }
-
-    @include maxW(780px) {
-      margin-right: -8px;
-      margin-left: -8px;
-    }
-    @include maxW(767px) {
-      margin-right: 17px;
-      margin-left: 0;
-    }
-  }
-
-  &__link {
-    font-size: 1.6rem;
-    line-height: 2;
-    // padding: 12px 10px 6px;
-    padding: 8px 10px 6px;
-    position: relative;
-    color: $blue-cl;
-    letter-spacing: 1px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      height: 2px;
-      width: 0;
-      background-color: $blue-cl;
-      left: auto;
-      right: 0;
-      bottom: 4px;
-      transition: width 0.12s ease-in;
-    }
-
-    &:hover::before {
-      width: calc(100% - 20px);
-      left: 10px;
-      right: auto;
-    }
-
-    @include mid(true);
-
-    @include maxW(767px) {
-      font-size: 1.2rem;
-      padding: 8px 0 12px;
-    }
-  }
-
-  &__btn {
-    margin-left: 32px;
-
-    .c-btn {
-      padding: 12px 12px 12px 34px;
-    }
-
-    @include maxW(1024px) {
-      margin: 0;
-      position: absolute;
-      top: -5px;
-      right: 20px;
-      z-index: 99;
-
-      .c-btn {
-        // padding: 7px 12px 7px 34px;
-
-        font-size: 1.8rem;
-        padding: 12px 12px 10px 34px;
-        margin-top: -1px;
-        margin-right: 1px;
-
-        &::after {
-          margin-left: 10px;
+        @include maxW(1024px) {
+            flex-direction: column;
+            padding-bottom: 5px;
+            padding-top: 0;
         }
-      }
-    }
-  }
-
-  &__bottom {
-    max-width: 1080px;
-    margin: 0 auto;
-    text-align: right;
-
-    > a {
-      font-size: 1.4rem;
-      line-height: 30px;
-      color: #a0a0a0;
-      text-decoration: underline;
-      letter-spacing: 0.3px;
-      display: inline-block;
-      // padding: 8px 0;
-
-      padding: 7px 0 8px;
-      margin-right: 2px;
+        @include maxW(767px) {
+            flex-direction: column;
+            padding: 0 10px 10px;
+            margin-bottom: 1px;
+        }
     }
 
-    @include maxW(1600px) {
-      > a {
-        margin-right: 50px;
-      }
+    &__logo,
+    &__nav {
+        @include maxW(1024px) {
+            width: 100%;
+        }
     }
 
-    @include maxW(1024px) {
-      padding: 0 20px;
+    &__logo {
+        > a {
+            position: relative;
+            top: 9px;
+        }
 
-      > a {
+        @include maxW(1024px) {
+            > a {
+                position: unset;
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+
+        @include maxW(1024px) {
+            margin-top: 24px;
+        }
+        @include maxW(767px) {
+            margin-top: 20px;
+            display: none;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        z-index: 999;
+
+        @include maxW(780px) {
+            width: 687px;
+        }
+        @include maxW(767px) {
+            width: 100%;
+        }
+    }
+
+    &__item {
+        // margin-right: 8px;
         margin-right: 0;
-      }
-    }
-    @include maxW(767px) {
-      padding: 0 10px;
 
-      > a {
-        font-size: 1.2rem;
-        padding: 8px 0 12px;
-      }
-    }
-  }
+        &:nth-child(2) {
+            //   margin-right: 14px;
+            margin-right: 8px;
+            margin-left: 8px;
+        }
 
-  &__copyright {
-    padding: 15px 20px 11px;
-    color: $white-cl;
-    text-align: center;
-    background-color: $blue-cl;
-    font-size: 1.4rem;
-    letter-spacing: 0.3px;
+        // &:nth-child(2) {
+        //   margin-right: 27px;
+        // }
 
-    @include maxW(1024px) {
-      font-size: 1.2rem;
-      padding: 5px 20px 2px;
+        @include maxW(1100px) {
+            margin-right: 0;
+
+            &:nth-child(2) {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+
+        @include maxW(1080px) {
+            margin-right: -5px;
+            margin-left: -5px;
+        }
+
+        @include maxW(1024px) {
+            margin-right: 17px;
+            margin-left: 0;
+        }
+
+        @include maxW(780px) {
+            margin-right: -8px;
+            margin-left: -8px;
+        }
+        @include maxW(767px) {
+            margin-right: 17px;
+            margin-left: 0;
+        }
     }
 
-    @include maxW(767px) {
-      font-size: 1rem;
-      padding: 8px 10px 6px;
+    &__link {
+        font-size: 1.6rem;
+        line-height: 2;
+        // padding: 12px 10px 6px;
+        padding: 8px 10px 6px;
+        position: relative;
+        color: $blue-cl;
+        letter-spacing: 1px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            height: 2px;
+            width: 0;
+            background-color: $blue-cl;
+            left: auto;
+            right: 0;
+            bottom: 4px;
+            transition: width 0.12s ease-in;
+        }
+
+        &:hover::before {
+            width: calc(100% - 20px);
+            left: 10px;
+            right: auto;
+        }
+
+        @include mid(true);
+
+        @include maxW(767px) {
+            font-size: 1.2rem;
+            padding: 8px 0 12px;
+        }
     }
-  }
+
+    &__btn {
+        margin-left: 32px;
+
+        .c-btn {
+            padding: 12px 12px 12px 34px;
+        }
+
+        @include maxW(1024px) {
+            margin: 0;
+            position: absolute;
+            top: -5px;
+            right: 20px;
+            z-index: 99;
+
+            .c-btn {
+                // padding: 7px 12px 7px 34px;
+
+                font-size: 1.8rem;
+                padding: 12px 12px 10px 34px;
+                margin-top: -1px;
+                margin-right: 1px;
+
+                &::after {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        max-width: 1080px;
+        margin: 0 auto;
+        text-align: right;
+
+        > a {
+            font-size: 1.4rem;
+            line-height: 30px;
+            color: #a0a0a0;
+            text-decoration: underline;
+            letter-spacing: 0.3px;
+            display: inline-block;
+            // padding: 8px 0;
+
+            padding: 7px 0 8px;
+            margin-right: 2px;
+        }
+
+        @include maxW(1199px) {
+            > a {
+                margin-right: 50px;
+            }
+        }
+
+        @include maxW(1024px) {
+            padding: 0 20px;
+
+            > a {
+                margin-right: 0;
+            }
+        }
+        @include maxW(767px) {
+            padding: 0 10px;
+
+            > a {
+                font-size: 1.2rem;
+                padding: 8px 0 12px;
+            }
+        }
+    }
+
+    &__copyright {
+        padding: 15px 20px 11px;
+        color: $white-cl;
+        text-align: center;
+        background-color: $blue-cl;
+        font-size: 1.4rem;
+        letter-spacing: 0.3px;
+
+        @include maxW(1024px) {
+            font-size: 1.2rem;
+            padding: 5px 20px 2px;
+        }
+
+        @include maxW(767px) {
+            font-size: 1rem;
+            padding: 8px 10px 6px;
+        }
+    }
 }

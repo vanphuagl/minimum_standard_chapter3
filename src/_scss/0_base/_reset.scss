@@ -202,24 +202,7 @@ button {
     cursor: pointer;
 }
 
-p,
-span,
-dl,
-dt,
-dd {
-    display: block;
-    margin: 0;
-}
-
-img {
-    max-width: 100%;
-}
-
 @media screen and (max-width: 992px) {
-    img {
-        max-width: 100%;
-    }
-
     h1,
     h2,
     h3,
